@@ -17,6 +17,7 @@ LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
 EVP_FILES := \
+    p_cleanup.c \
     p_dec.c \
     p_enc.c \
     p_open.c \
