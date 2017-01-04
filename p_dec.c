@@ -85,3 +85,8 @@ err:
 #endif
 	return(ret);
 	}
+
+int EVP_DecryptFinal(EVP_CIPHER_CTX *ctx, unsigned char *outm, int *outl)
+	{
+	return EVP_DecryptFinal_ex(ctx, outm, outl);
+	}
