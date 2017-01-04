@@ -18,6 +18,7 @@ include $(CLEAR_VARS)
 
 EVP_FILES := \
     p_cleanup.c \
+    p_ctrl.c \
     p_dec.c \
     p_enc.c \
     p_open.c \
@@ -33,7 +34,7 @@ ifeq ($(TARGET_REQUIRES_B64_COMPAT),true)
 LOCAL_SRC_FILES += $(B64_FILES)
 endif
 
-LOCAL_SHARED_LIBRARIES := liblog libcrypto
+LOCAL_SHARED_LIBRARIES := liblog libcrypto libssl
 LOCAL_MODULE := libboringssl-compat
 LOCAL_MODULE_TAGS := optional
 include $(BUILD_SHARED_LIBRARY)
